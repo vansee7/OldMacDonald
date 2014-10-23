@@ -80,7 +80,9 @@ class Farm
 ``` 
 
 *Now, change your code in `setup()` to create an new instance of type `Farm` and call its `animalSounds` function.*
+
 It turns out that baby chicks make two different sounds. Sometimes Some chicks say "cheep" while others say "cluck".
+
 *Add a three argument `Chick` constructor that will randomly choose one of the two possible sounds. You will also have to modify your Farm class code to construct the Chick with two possible sounds.*
 
 Finally, it also came to pass that the cows get a personal name, like Elsie.
