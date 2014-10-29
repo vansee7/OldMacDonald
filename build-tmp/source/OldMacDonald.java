@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class OldMacDonald extends PApplet {
+
 Farm myRanch;
 
 public void setup() 
@@ -103,7 +119,7 @@ interface Animal
   }      
   public Chick(String type, String sound1, String sound2)
   {
-  	if(Math.random()<.5)
+  	if(Math.random()<.5f)
   		mySound = sound2;
   	else  
   		mySound = sound1;
@@ -111,4 +127,13 @@ interface Animal
   }
   public String getSound(){return mySound;}     
   public String getType(){return myType;} 
+}
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "OldMacDonald" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
